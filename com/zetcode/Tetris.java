@@ -6,11 +6,17 @@ import javax.swing.JLabel;
 
 public class Tetris extends JFrame {
 
+    private static Tetris instance;
+
     private JLabel statusbar;
 
-    public Tetris() {
-
+    private Tetris() {
         initUI();
+    }
+
+    public static synchronized Tetris getInstance(){
+        if(instance==null) instance = new Tetris();
+        return instance;
     }
 
     private void initUI() {

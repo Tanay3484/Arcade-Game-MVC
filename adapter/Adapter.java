@@ -8,7 +8,6 @@ package adapter;
 import controller.*;
 import view.*;
 import java.awt.event.*;
-import java.util.*;
 
 public class Adapter implements ActionListener {
 	private Controller c;
@@ -25,10 +24,6 @@ public class Adapter implements ActionListener {
     		// adapter asks the controller to perform desired action based on the button pressed
     		if(v.isReset(e))
     			c.setRequest();
-    		else {
-    			ArrayList<Integer> position = v.getPosition(e);
-    			c.setRequest(position);
-    		}
     }
 
 }

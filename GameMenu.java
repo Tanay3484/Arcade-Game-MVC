@@ -54,7 +54,7 @@ public class GameMenu {
         tetrisBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 EventQueue.invokeLater(() -> {
-                    var game = new Tetris();
+                    var game = Tetris.getInstance();
                     game.setVisible(true);
                 });
             }
